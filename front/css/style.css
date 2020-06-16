@@ -7,26 +7,34 @@ body {
     background-color: black;
 }
 
-img {
+.title {
     width: 90%;
     margin-left: 5%;
+    margin-top: 1%;
 }
 
-/* etoile */
-#etoile-1 {
+#new-game {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 0%;
+}
+
+/* etoile1 */
+#etoile1 {
     width: 2px;
     height: 500px;
     background-color: white;
     position: absolute;
     top: -75%;
-    left: 5%;
+    left: 10%;
 }
 
-.slide-in-top {
-	animation: slide-in-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.slide-in-top-etoile1 {
+	animation: slide-in-top-etoile1 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@keyframes slide-in-top {
+@keyframes slide-in-top-etoile1 {
     0% {
         transform: translateY(0);
         opacity: 0;
@@ -37,9 +45,102 @@ img {
     }
 }
 
-.autreEtoile {
-    width: 0.5px;
-    height: 0.5px;
+/* etoile 2 */
+#etoile2 {
+    width: 2px;
+    height: 300px;
     background-color: white;
-    margin-left: 5%;
+    position: absolute;
+    top: -45%;
+    left: 25%;
+}
+
+.slide-in-top-etoile2 {
+	animation: slide-in-top-etoile2 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top-etoile2 {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(400%);
+        opacity: 1;
+    }
+}
+
+/* etoile 3 */
+#etoile3 {
+    width: 2px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    top: -30%;
+    left: 45%;
+}
+
+.slide-in-top-etoile3 {
+	animation: slide-in-top-etoile3 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top-etoile3 {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(600%);
+        opacity: 1;
+    }
+}
+
+/* etoile 4 */
+#etoile4 {
+    width: 2px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top: -45%;
+    left: 60%;
+}
+
+.slide-in-top-etoile4 {
+	animation: slide-in-top-etoile4 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top-etoile4 {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(400%);
+        opacity: 1;
+    }
+}
+
+/* etoile 5 */
+#etoile5 {
+    width: 2px;
+    height: 450px;
+    background-color: white;
+    position: absolute;
+    top: -70%;
+    left: 80%;
+}
+
+.slide-in-top-etoile5 {
+	animation: slide-in-top-etoile5 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top-etoile5 {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(300%);
+        opacity: 1;
+    }
 }
