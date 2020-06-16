@@ -14,6 +14,27 @@ body {
     left: 40%;
 }
 
+#missile {
+    width: 2%;
+    position: absolute;
+    top: 85%;
+    left: 46%;
+}
+
+#right-arrow {
+    width: 7%;
+    position: absolute;
+    top: 92%;
+    right: 2%;
+}
+
+#left-arrow {
+    width: 7%;
+    position: absolute;
+    top: 92%;
+    left: 2%;
+}
+
 /* monstre */
 .monstre1 {
     width: 10%;
