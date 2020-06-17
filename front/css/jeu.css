@@ -7,6 +7,47 @@ body {
     background-color: black;
 }
 
+.none {
+    visibility: hidden;
+}
+
+.lose {
+    width: 100%;
+    position: absolute;
+    top: 25%;
+}
+
+.restart {
+    border:none;
+    padding:6px 0 6px 0;
+    border-radius:2px;
+    box-shadow:3px 3px 12px #999;
+    background:#fff;
+    font:bold 13px Arial;
+    color:#555;
+    width: 20%;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    text-align: center; 
+}
+
+.menu {
+    border:none;
+    padding:6px 0 6px 0;
+    border-radius:2px;
+    box-shadow:3px 3px 12px #999;
+    background:#fff;
+    font:bold 13px Arial;
+    color:#555;
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    text-align: center; 
+    text-decoration: none;
+    top: 67%;
+}
+
 #vaisseau {
     width: 15%;
     position: absolute;
