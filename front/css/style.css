@@ -7,6 +7,11 @@ body {
     background-color: black;
 }
 
+@font-face {
+    font-family: 'invaders';
+    src: url('../font/the_invaders/the_invaders.ttf') format('truetype');
+}
+
 .title {
     width: 90%;
     margin-left: 5%;
@@ -143,4 +148,12 @@ body {
         transform: translateY(300%);
         opacity: 1;
     }
+}
+
+/* select difficulté */
+select {
+    font-family: 'invaders';
+    position: absolute;
+    top: 63%;
+    left: 40%;
 }
