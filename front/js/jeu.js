@@ -1,12 +1,11 @@
 window.addEventListener("DOMContentLoaded", function() {
-    let left = 40;
+    let left = 45;
     let leftArrow = document.getElementById('vaisseau');
-    let missile = 46;
+    let missile = 51;
     let leftmissile = document.getElementById('missile');
 
     // deplacement vaisseau
     document.getElementById('left-arrow').addEventListener('click', function () {
-        // alert('je suis a gauche');
         left -= 1;
         missile -= 1;
         leftArrow.style.left = left + "%";
@@ -19,8 +18,8 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     })
     
+    
     document.getElementById('right-arrow').addEventListener('click', function () {
-        // alert('je suis a droite');
         left += 1;
         missile += 1;
         leftArrow.style.left = left + "%";
