@@ -31,6 +31,32 @@ window.addEventListener("DOMContentLoaded", function() {
             Lmissile = 84;
         }
     })
+
+    // tir missile
+    let i = 0;
+    document.getElementById('fire').addEventListener('click', function () {
+        i++;
+        // document.getElementById('missile').classList.remove('none');
+        document.getElementById('vaisseau').insertAdjacentHTML('beforebegin', `<img id="missile${i}" src="../img/missile.png" alt="">`);
+        let missile = document.getElementById(`missile${i}`);
+        let topMissile = 85;
+        let leftVaisseau = 43;
+
+        missile.style.width = '2%';
+        missile.style.position = 'absolute';
+        missile.style.left = (leftVaisseau + 6) + '%';
+
+        let intervalMissile = setInterval(() => {
+            topMissile -= 1;
+            missile.style.top = topMissile + "%";
+            if (topMissile <= 0) {
+                console.log(`missile${i}`)
+                document.getElementById(`missile${i}`).classList.add('none');
+                clearInterval(intervalMissile);
+            }
+        }, 100);
+    })
+
     
     // clear interval
     function clearIntervalMonstre() {
@@ -1547,21 +1573,6 @@ window.addEventListener("DOMContentLoaded", function() {
             clearIntervalMonstre();
         }
     }, 100);
-
-    let topMissile = 85;
-    let missile = document.getElementById('missile');
-    document.getElementById('fire').addEventListener('click', function () {
-        document.getElementById('missile').classList.remove('none');
-        let intervalMissile = setInterval(() => {
-            topMissile -= 1;
-            missile.style.top = topMissile + "%";
-            if (topMissile <= 0) {
-                document.getElementById('missile').classList.add('none');
-                clearInterval(intervalMissile);
-            }
-        }, 100);
-
-    })
 })
 
 // restart game
