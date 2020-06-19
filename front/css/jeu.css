@@ -52,14 +52,21 @@ body {
     width: 15%;
     position: absolute;
     top: 90%;
-    left: 45%;
+    left: 43%;
 }
 
 #missile {
     width: 2%;
     position: absolute;
     top: 85%;
-    left: 51%;
+    left: 49%;
+}
+
+#fire {
+    position: absolute;
+    width: 20%;
+    top: 80%;
+    left: 40%;
 }
 
 #right-arrow {

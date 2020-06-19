@@ -166,7 +166,7 @@ body {
 }
 
 .custom-dropdown__select--white {
-    background-color: #20b390;
+    background-color: #e3e639;
     color: #fff;    
 }
 
@@ -225,7 +225,7 @@ body {
     /* White dropdown style */
     .custom-dropdown--white::before {
         top: .5em; bottom: .5em;
-        background-color: #20b390;
+        background-color: #e3e639;
         color: #fff; 
         border-left: 1px solid rgba(0,0,0,.1);
     }

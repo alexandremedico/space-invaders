@@ -1,34 +1,34 @@
 window.addEventListener("DOMContentLoaded", function() {
     let left = 45;
     let leftArrow = document.getElementById('vaisseau');
-    let missile = 51;
+    let Lmissile = 51;
     let leftmissile = document.getElementById('missile');
 
     // deplacement vaisseau
     document.getElementById('left-arrow').addEventListener('click', function () {
         left -= 1;
-        missile -= 1;
+        Lmissile -= 1;
         leftArrow.style.left = left + "%";
-        leftmissile.style.left = missile + "%";
+        leftmissile.style.left = Lmissile + "%";
         if (left <= 8) {
             left = 8;
         }
-        if (missile <= 14) {
-            missile = 14;
+        if (Lmissile <= 14) {
+            Lmissile = 14;
         }
     })
     
     
     document.getElementById('right-arrow').addEventListener('click', function () {
         left += 1;
-        missile += 1;
+        Lmissile += 1;
         leftArrow.style.left = left + "%";
-        leftmissile.style.left = missile + "%";
+        leftmissile.style.left = Lmissile + "%";
         if (left >= 78) {
             left = 78;
         }
-        if (missile >= 84) {
-            missile = 84;
+        if (Lmissile >= 84) {
+            Lmissile = 84;
         }
     })
     
@@ -1547,6 +1547,21 @@ window.addEventListener("DOMContentLoaded", function() {
             clearIntervalMonstre();
         }
     }, 100);
+
+    let topMissile = 85;
+    let missile = document.getElementById('missile');
+    document.getElementById('fire').addEventListener('click', function () {
+        document.getElementById('missile').classList.remove('none');
+        let intervalMissile = setInterval(() => {
+            topMissile -= 1;
+            missile.style.top = topMissile + "%";
+            if (topMissile <= 0) {
+                document.getElementById('missile').classList.add('none');
+                clearInterval(intervalMissile);
+            }
+        }, 100);
+
+    })
 })
 
 // restart game
