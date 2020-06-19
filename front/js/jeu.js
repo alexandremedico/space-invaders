@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function() {
-    let left = 45;
+    let left = 43;
     let leftArrow = document.getElementById('vaisseau');
-    let Lmissile = 51;
+    let Lmissile = 49;
     let leftmissile = document.getElementById('missile');
 
     // deplacement vaisseau
