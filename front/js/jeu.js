@@ -1585,7 +1585,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 clearIntervalMonstre();
             }
         }, vitesse);
-    }, 1000);
+    }, 500);
 })
 
 // restart game
