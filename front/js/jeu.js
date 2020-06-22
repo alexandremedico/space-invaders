@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     // tir missile
     let i = 0;
-    document.getElementById('fire').addEventListener('click', function () {
+    document.getElementById('vaisseau').addEventListener('click', function () {
         i++;
         // document.getElementById('missile').classList.remove('none');
         document.getElementById('vaisseau').insertAdjacentHTML('beforebegin', `<img id="missile${i}" src="../img/missile.png" alt="">`);
