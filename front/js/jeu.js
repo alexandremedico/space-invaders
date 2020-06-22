@@ -1591,4 +1591,14 @@ window.addEventListener("DOMContentLoaded", function() {
 // restart game
 document.getElementById('restart').addEventListener('click', function () {
     document.location.reload();
+    // vitesse monstre
+    let vitesse;
+    socket.emit('valueVit');
+    socket.on('valueVitesse', function (valueVitesse) {
+        vitesse = valueVitesse;
+        console.log(vitesse);
+        if (vitesse == null) {
+            vitesse = 500;
+        }
+    })
 })
