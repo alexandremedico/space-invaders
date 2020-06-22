@@ -1,4 +1,6 @@
 window.addEventListener("DOMContentLoaded", function() {
+    const socket = io();
+
     // etoile1
     setInterval(() => {
         document.getElementById('etoile1').classList.add('slide-in-top-etoile1');
@@ -38,4 +40,11 @@ window.addEventListener("DOMContentLoaded", function() {
             document.getElementById('etoile5').classList.remove('slide-in-top-etoile5');
         }, 1500);
     }, 3500);
+
+    // envoie difficulté
+    document.getElementById('new-game').addEventListener('click', function () {
+        let valueDifficulte = document.getElementById('difficulte').value;
+        console.log(valueDifficulte)
+        socket.emit('valueDif', valueDifficulte)
+    })
 })

@@ -17,5 +17,19 @@ app.get('/', (req, res) => {
     res.render('/index.html');
 })
 
+// io
+let valueVitesse;
+io.on('connection', function (socket) {
+    console.log('socket open');
+
+    socket.on('valueDif', function (valueDifficulte) {
+        valueVitesse = valueDifficulte;
+    })
+
+    socket.on('valueVit', function () {
+        socket.emit('valueVitesse', valueVitesse);
+    })
+})
+
 // Lancement de l'application
 server.listen(process.env.PORT || 5234, () => console.log("Serveur ouvert sur le port 5234"));
