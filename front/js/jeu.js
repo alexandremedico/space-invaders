@@ -3,8 +3,9 @@ window.addEventListener("DOMContentLoaded", function() {
     let left = 43;
     let leftArrow = document.getElementById('vaisseau');
     let Lmissile = 49;
-    let leftmissile = document.getElementById('missile');
-
+    let i = 0;
+    let leftmissile = document.getElementById(`missile0`);
+    
     // deplacement vaisseau
     document.getElementById('left-arrow').addEventListener('click', function () {
         left -= 1;
@@ -32,27 +33,24 @@ window.addEventListener("DOMContentLoaded", function() {
             Lmissile = 84;
         }
     })
-
+    
     // tir missile
-    let i = 0;
     document.getElementById('vaisseau').addEventListener('click', function () {
         i++;
-        // document.getElementById('missile').classList.remove('none');
         document.getElementById('vaisseau').insertAdjacentHTML('beforebegin', `<img id="missile${i}" src="../img/missile.png" alt="">`);
         let missile = document.getElementById(`missile${i}`);
+
         let topMissile = 85;
-        let leftVaisseau = 43;
 
         missile.style.width = '2%';
         missile.style.position = 'absolute';
-        missile.style.left = (leftVaisseau + 6) + '%';
+        missile.style.left = (left + 6) + '%';
 
         let intervalMissile = setInterval(() => {
             topMissile -= 1;
             missile.style.top = topMissile + "%";
-            if (topMissile <= 0) {
-                console.log(`missile${i}`)
-                document.getElementById(`missile${i}`).classList.add('none');
+            if (topMissile <= -5) {
+                document.getElementsByClassName('game')[0].removeChild(missile);
                 clearInterval(intervalMissile);
             }
         }, 100);
